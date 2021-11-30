@@ -1,0 +1,39 @@
+<odoo>
+	<!-- Form View -->
+	<record id="color_view_form" model="ir.ui.view">
+		<field name="name">Color Form</field>
+		<field name="model">color</field>
+		<field name="arch" type="xml">
+			<form>
+				<group>
+					<group>
+						<field name="name" />
+					</group>
+					<group>
+						<field name="color" widget="int_color" />
+					</group>
+				</group>
+			</form>
+		</field>
+	</record>
+
+	<!-- Tree(list) View -->
+	<record id="color_view_tree" model="ir.ui.view">
+		<field name="name">Color Tree</field>
+		<field name="model">color</field>
+		<field name="arch" type="xml">
+			<tree>
+				<field name="name" />
+			</tree>
+		</field>
+	</record>
+
+	<record id='color_action' model='ir.actions.act_window'>
+		<field name="name">Color</field>
+		<field name="res_model">color</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+
+	<menuitem id="color_primary_menu" name="Colors" />
+	<menuitem id="color_menu" name="Color" parent="color_primary_menu" action="color_action" />
+</odoo>

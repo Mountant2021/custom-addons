@@ -1,0 +1,8 @@
+<odoo>
+	<template id="assets_end" inherit_id="web.assets_backend">
+		<xpath expr="." position="inside">
+			<script src="/mo_color_integer/static/src/js/field_widget.js" type="text/javascript" />
+			<link href="/mo_color_integer/static/src/scss/field_widget.scss" rel="stylesheet" type="text/scss" />
+		</xpath>
+	</template>
+</odoo>
